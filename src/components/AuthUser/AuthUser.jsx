@@ -22,7 +22,7 @@ function AuthUser() {
     };
     const width = (windowSize.width)
     const height = (windowSize.height)
-    const formwidth= (width/100)*30;
+    const formwidth= (width/100)*20;
     const formheight =(height/100)*90;
     const loginheight = (height/100)*80;
     
@@ -55,7 +55,7 @@ function AuthUser() {
                             <input className=' w-[100%] rounded-md px-3 py-1 backdrop-blur-sm bg-white/30 text-white' placeholder='Password' type="password" />
                             <input className=' w-[100%] rounded-md px-3 py-1 backdrop-blur-sm bg-white/30 text-white' placeholder='Confirm Password' type="password" />
                             <div className=' flex text-[#b1b1b1] gap-2'>
-                                <p>Already have an account? </p><a href="#" onClick={toggleForm}><h1 className='  text-[#a9a9a9] font-bold '> Login</h1></a>
+                                <p>Already have an account? </p><a href="#" onClick={toggleForm}><h1 className='  text-[#a9a9a9] font-bold hover:text-[#01D7E2] '> Login</h1></a>
                             </div>
                             <div>
                                 <button className=' w-full rounded-lg pt-2 pb-2 border inset-0 border-[#01D7E2] text-white hover:text-[#01D7E2] bg-[#0B0B0B]'>Submit</button>
@@ -87,7 +87,7 @@ function AuthUser() {
                                 </div>
 
                                 <div>
-                                    <button className=' w-full rounded-lg pt-2 pb-2 border inset-0 border-[#ED0200] text-white hover:text-[#ED0200] bg-[#171717]'>Submit</button>
+                                    <button className=' w-full rounded-lg pt-2 pb-2 border inset-0 border-[#ff7b7b] text-white hover:text-[#ED0200] bg-[#171717]'>Submit</button>
                                 </div>
                             </div>
                     </div>
