@@ -63,19 +63,22 @@ function Itemdisplay( ) {
                 <div>
                     {items.map(product => (
                         <div className=' ' key={product.id}>
-                            <div className=' flex gap-6 border-2 m-2 rounded-lg'>
-                                <div className=' w-[20%] bg-[#d1d1d1] items-center justify-center text-center flex '>
-                                    <img className=' ' src={product.images[0]} alt={product.title} />
+                            <div className=' flex gap-6 border-2 m-2 rounded-lg '>
+                                <div className='md:max-w-[20%] max-w-[35%] md:min-w-[20%] min-w-[35%] bg-[#d1d1d1] items-center justify-center text-center flex '>
+                                    <img className='' src={product.images[0]} alt={product.title} />
                                 </div>
                                 <div className=' flex flex-col justify-center md:gap-1 xl:gap-2'>
-                                    <h2 className=' text-lg md:text-2xl lg:text-3xl xl:text-4xl'>{product.title}</h2>
+                                    <h2 className='flex flex-wrap text-lg md:text-2xl lg:text-3xl xl:text-4xl'>{product.title}</h2>
                                     <div className=' flex text-sm md:text-md lg:text-lg  xl:text-xl'><p className=' text-center items-center justify-center text-[#ffa41c] flex'>{reviewStars(product.rating)}</p> <p className=' '>({product.rating})</p></div>
                                   
                                     <p className=' text-[#565959] text-sm md:text-md lg-text-lg xl:text-xl'>({product.reviews.length}) customer reviews</p>
-                                    <div className=' flex gap-2 items-end'>
+                                    <div className=' flex gap-2 md:items-end flex-col md:flex-row'>
                                         <p className=' text-xl md:text-2xl lg:text-3xl xl:text-4xl '>${product.price}</p>
-                                        <div className=' flex text-[#565959] text-sm md:text-md lg:text-lg xl:text-xl'><p>M.R.P: </p><p className=' line-through '>${actualPrise(product.price,product.discountPercentage)}</p></div>
-                                        <p className=' text-sm md:text-md lg:text-lg xl:text-xl'>({product.discountPercentage}% off)</p>
+                                        <div className=' flex gap-2 items-end flex-row '>
+                                            <div className=' flex text-[#565959] text-sm md:text-md lg:text-lg xl:text-xl'><p>M.R.P: </p><p className=' line-through '>${actualPrise(product.price,product.discountPercentage)}</p></div>
+                                            <p className=' text-sm md:text-md lg:text-lg xl:text-xl'>({product.discountPercentage}% off)</p>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
