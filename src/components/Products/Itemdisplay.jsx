@@ -3,11 +3,13 @@ import axios from 'axios'
 import { IoIosStar } from "react-icons/io";
 import { IoIosStarHalf } from "react-icons/io";
 import { IoIosStarOutline } from "react-icons/io";
+import { useParams } from 'react-router';
 
-function Itemdisplay({ category }) {
+function Itemdisplay( ) {
+    const {category}= useParams();
     const [items, setItems] = useState([])
     const [loading , setLoading ] = useState([true])
-
+    
     useEffect(()=> {
        ;(async ()=> {
         try{
