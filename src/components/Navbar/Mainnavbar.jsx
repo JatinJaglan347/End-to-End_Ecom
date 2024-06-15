@@ -97,7 +97,7 @@ export function Mainnavbar() {
         <div className='flex items-center space-x-2 bg-white px-3 py-2 rounded-md shadow-md text-gray-800 focus:outline-none ml-4'>
             <FaCartShopping className=' inline-block w-5 h-5' />         
         </div>
-        <div className=' flex items-center space-x-2 bg-white px-3 py-2 rounded-md shadow-md text-gray-800 focus:outline-none ml-4'>
+        <div className=' flex hidden lg:block items-center space-x-2 bg-white px-3 py-2 rounded-md shadow-md text-gray-800 focus:outline-none ml-4'>
             <FaRegUser className='h-5 w-5 ' />
         </div>
         
@@ -153,7 +153,11 @@ export function Mainnavbar() {
                     ))}
                   </nav>
                 </div>
-
+                <div>
+                  <button className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black items-center justify-center text-center">
+                    <FaRegUser className="h-5 w-full text-gray-600" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

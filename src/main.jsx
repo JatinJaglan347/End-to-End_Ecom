@@ -5,6 +5,7 @@ import Landingpage from './components/Landingpage/Landingpage.jsx';
 import Itemdisplay from './components/Products/Itemdisplay.jsx';
 import './index.css';
 import CategoriesContextProvider from './contexts/Categories/categories.jsx';
+import RandomproductsContextProvider from './contexts/RandomProducts/Randomproducts.jsx';
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
     element: <Landingpage />,
   },
   {
-    path: ':category',
+    path: '/category/:category',
     element: <Itemdisplay />,
   },
 ]);
@@ -20,7 +21,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CategoriesContextProvider>
-      <RouterProvider router={router} />
+      <RandomproductsContextProvider>
+        <RouterProvider router={router} />
+      </RandomproductsContextProvider>
     </CategoriesContextProvider>
   </React.StrictMode>
 );
