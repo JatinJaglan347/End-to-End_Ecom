@@ -7,6 +7,7 @@ import { RandomproductsContext } from '../../contexts/RandomProducts/Randomprodu
 import Hereosection from '../HeroSection/Hereosection';
 import Categories from '../Categories/Categories';
 import SmallAbout from '../About/SmallAbout';
+import Footer from '../Footer/Footer';
 
 
 const Landingpage = () => {
@@ -34,6 +35,10 @@ const Landingpage = () => {
             <div className="border-t  border-gray-400 my-14 w-[80%] "></div>   
         </div>
         <SmallAbout/>
+        <div className=' z-10 w-full flex flex-col items-center'>
+            <div className="border-t  border-gray-400 my-14 w-[80%] "></div>   
+        </div>
+        <Footer/>
       </div>
     {/* </div> */}
     </>
