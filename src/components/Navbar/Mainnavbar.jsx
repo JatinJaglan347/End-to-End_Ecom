@@ -34,16 +34,17 @@ export function Mainnavbar() {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const [country, setCountry] = useState('');
+  // const [country, setCountry] = useState('');
 
-  useEffect(() => {
-    fetch('http://ip-api.com/json/')
-      .then(response => response.json())
-      .then(data => {
-        setCountry(data);
-      })
-      .catch(error => console.error('Error fetching the country:', error));
-  }, []);
+  // useEffect(() => {
+  //   fetch('http://ip-api.com/json/')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setCountry(data);
+  //     })
+  //     .catch(error => console.error('Error fetching the country:', error));
+  // }, []);
+  
   
 
   return (
@@ -53,12 +54,12 @@ export function Mainnavbar() {
           <span>
           <BsCart4 className=' text-4xl md:text-5xl lg:text-6xl' />
           </span>
-          <span className="font-bold text-xl md:text-2xl">DevUI</span>
+          <span className="font-bold text-xl md:text-2xl">Ecom</span>
         </div>
         
         <div className="hidden lg:block ">
             <div className=' flex justify-center items-center '>
-                <div className=" flex items-center w-auto px-3 ">
+                {/* <div className=" flex items-center w-auto px-3 ">
                     <img className='w-[80%] md:w-[50%] md:h-[80%] ' src={`https://flagsapi.com/${country.countryCode}/flat/64.png`} alt={`Flag of ${country}`} />
                     <div className=' flex flex-col '>
                         <p className=' test-sm md:text-base font-semibold'>{country.country}</p>
@@ -67,7 +68,7 @@ export function Mainnavbar() {
                             <RiUserLocationFill  className=' text-sm md:text-base'/>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <ul className="ml-12 inline-flex space-x-8">
                     
                     {menuItems.map((item) => (
@@ -114,8 +115,8 @@ export function Mainnavbar() {
                     <span>
                         <BsCart4 className=' text-4xl md:text-5xl lg:text-6xl' />
                     </span>
-                    <span className="font-bold text-xl md:text-2xl">DevUI</span>
-                    <div className=" flex items-center w-auto px-3 ">
+                    <span className="font-bold text-xl md:text-2xl">Ecom</span>
+                    {/* <div className=" flex items-center w-auto px-3 ">
                         <img className='w-[80%] md:w-[50%] md:h-[80%] ' src={`https://flagsapi.com/${country.countryCode}/flat/64.png`} alt={`Flag of ${country}`} />
                         <div className=' flex flex-col '>
                             <p className=' test-sm md:text-base font-semibold'>{country.country}</p>
@@ -124,7 +125,7 @@ export function Mainnavbar() {
                                 <RiUserLocationFill  className=' text-sm md:text-base'/>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="-mr-2">
                     <button
