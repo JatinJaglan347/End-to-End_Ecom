@@ -47,7 +47,7 @@ export function Mainnavbar() {
   
 
   return (
-    <div className="relative w-full bg-white">
+    <div className="w-full bg-transparent">
       <div className="mx-auto flex w-[80%]  items-center justify-between px-0 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>
@@ -97,7 +97,7 @@ export function Mainnavbar() {
         <div className='flex items-center space-x-2 bg-white px-3 py-2 rounded-md shadow-md text-gray-800 focus:outline-none ml-4'>
             <FaCartShopping className=' inline-block w-5 h-5' />         
         </div>
-        <div className=' flex hidden lg:block items-center space-x-2 bg-white px-3 py-2 rounded-md shadow-md text-gray-800 focus:outline-none ml-4'>
+        <div className=' hidden lg:block items-center space-x-2 bg-white px-3 py-2 rounded-md shadow-md text-gray-800 focus:outline-none ml-4'>
             <FaRegUser className='h-5 w-5 ' />
         </div>
         
