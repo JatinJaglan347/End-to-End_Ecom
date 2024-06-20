@@ -10,15 +10,16 @@ import { BsCart4 } from "react-icons/bs";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
+import { NavLink } from 'react-router-dom';
 
 const menuItems = [
   {
     name: 'Home',
-    href: '#',
+    href: '/',
   },
   {
     name: 'About',
-    href: '#',
+    href: '/about',
   },
   {
     name: 'Contact',
@@ -34,18 +35,7 @@ export function Mainnavbar() {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  // const [country, setCountry] = useState('');
 
-  // useEffect(() => {
-  //   fetch('http://ip-api.com/json/')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       setCountry(data);
-  //     })
-  //     .catch(error => console.error('Error fetching the country:', error));
-  // }, []);
-  
-  
 
   return (
     <div className="w-full bg-transparent">
@@ -59,27 +49,18 @@ export function Mainnavbar() {
         
         <div className="hidden lg:block ">
             <div className=' flex justify-center items-center '>
-                {/* <div className=" flex items-center w-auto px-3 ">
-                    <img className='w-[80%] md:w-[50%] md:h-[80%] ' src={`https://flagsapi.com/${country.countryCode}/flat/64.png`} alt={`Flag of ${country}`} />
-                    <div className=' flex flex-col '>
-                        <p className=' test-sm md:text-base font-semibold'>{country.country}</p>
-                        <div className=' flex gap-1 justify-center items-center'>
-                            <p className='text-[10px] md:text-sm text-xs'>({country.countryCode})</p>
-                            <RiUserLocationFill  className=' text-sm md:text-base'/>
-                        </div>
-                    </div>
-                </div> */}
+                
                 <ul className="ml-12 inline-flex space-x-8">
                     
                     {menuItems.map((item) => (
                     <li key={item.name}>
-                        <a
-                        href={item.href}
-                        className="inline-flex items-center text-lg font-semibold text-gray-800 hover:text-gray-900"
+                        <NavLink
+                        to={item.href}
+                        className={ ({isActive})=> `inline-flex items-center text-lg font-semibold  ${isActive ? " text-[#01D7E2] underline  underline-offset-2  hover:text-slate-700": " text-slate-800 hover:text-[#01D7E2]"}`}
                         >
                         {item.name}
                         
-                        </a>
+                        </NavLink>
                     </li>
                     ))}
                 </ul>
@@ -116,16 +97,7 @@ export function Mainnavbar() {
                         <BsCart4 className=' text-4xl md:text-5xl lg:text-6xl' />
                     </span>
                     <span className="font-bold text-xl md:text-2xl">Ecom</span>
-                    {/* <div className=" flex items-center w-auto px-3 ">
-                        <img className='w-[80%] md:w-[50%] md:h-[80%] ' src={`https://flagsapi.com/${country.countryCode}/flat/64.png`} alt={`Flag of ${country}`} />
-                        <div className=' flex flex-col '>
-                            <p className=' test-sm md:text-base font-semibold'>{country.country}</p>
-                            <div className=' flex gap-1 justify-center items-center'>
-                                <p className='text-[10px] md:text-sm text-xs'>({country.countryCode})</p>
-                                <RiUserLocationFill  className=' text-sm md:text-base'/>
-                            </div>
-                        </div>
-                    </div> */}
+                    
                   </div>
                   <div className="-mr-2">
                     <button
