@@ -9,6 +9,7 @@ import RandomproductsContextProvider from './contexts/RandomProducts/Randomprodu
 import  Product  from './components/Products/Product.jsx';
 import Test from './test.jsx'
 import Layout from './Layout.jsx';
+import SmallAbout from './components/About/SmallAbout.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <Landingpage />,
+      },
+      {
+        path: '/about',
+        element: <SmallAbout />,
       },
       {
         path: '/category/:category',
