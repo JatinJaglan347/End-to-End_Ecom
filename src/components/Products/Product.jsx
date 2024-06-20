@@ -6,6 +6,7 @@ import { IoIosStarOutline } from "react-icons/io";
 import { TbTruckReturn ,TbTruckDelivery ,TbShieldCheck, TbCash } from "react-icons/tb";
 import { GrPowerReset } from "react-icons/gr";
 import { useParams } from 'react-router';
+import LoadingScreen from '../LoadingScreen/LoadingScreen';
 
 function Product() {
     const { category, id } = useParams();
@@ -111,7 +112,7 @@ function Product() {
     if (loading){
         return(
             <>
-            <div>Loading.....</div>
+            <LoadingScreen/>
             </>
         )
     }

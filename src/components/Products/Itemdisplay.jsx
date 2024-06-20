@@ -5,6 +5,7 @@ import { IoIosStarHalf } from "react-icons/io";
 import { IoIosStarOutline } from "react-icons/io";
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import LoadingScreen from '../LoadingScreen/LoadingScreen';
 
 function Itemdisplay( ) {
     const {category}= useParams();
@@ -53,15 +54,15 @@ function Itemdisplay( ) {
 
     if (loading){
         return( <>
-        <div>Loading.....</div>
+        <LoadingScreen/>
         </>)
     }
 
   return (
     <>
         <div className=''>
-            <div>
-                <div>
+            <div className=' w-full justify-center items-center flex flex-col my-9'>
+                <div className=' lg:w-[80%]'>
                     {items.map(product => (
                         <div className=' ' key={product.id}>
                             <div className=' flex gap-6 border-2 m-2 rounded-lg '>

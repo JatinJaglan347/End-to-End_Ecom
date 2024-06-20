@@ -10,6 +10,7 @@ import  Product  from './components/Products/Product.jsx';
 import Test from './test.jsx'
 import Layout from './Layout.jsx';
 import SmallAbout from './components/About/SmallAbout.jsx';
+import Contact from './components/Contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,11 +26,15 @@ const router = createBrowserRouter([
         element: <SmallAbout />,
       },
       {
+        path: '/contact',
+        element: <Contact />,
+      },
+      {
         path: '/category/:category',
         element: <Itemdisplay />,
       },
       {
-        path: '/category/:category/product/:id/:title',
+        path: '/product/:id/:title',
         element: <Product />,
       },
       {
