@@ -4,6 +4,7 @@ import { IoIosStar } from "react-icons/io";
 import { IoIosStarHalf } from "react-icons/io";
 import { IoIosStarOutline } from "react-icons/io";
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 
 function Itemdisplay( ) {
     const {category}= useParams();
@@ -64,22 +65,29 @@ function Itemdisplay( ) {
                     {items.map(product => (
                         <div className=' ' key={product.id}>
                             <div className=' flex gap-6 border-2 m-2 rounded-lg '>
+                                {/* <Link to={`/category/${category}/product/${product.id}/${product.title}`}> */}
                                 <div className='md:max-w-[20%] max-w-[35%] md:min-w-[20%] min-w-[35%] bg-[#d1d1d1] items-center justify-center text-center flex '>
+                                    <Link to={`/category/${category}/product/${product.id}/${product.title}`}>
                                     <img className='' src={product.images[0]} alt={product.title} />
+                                    </Link>
                                 </div>
+                                {/* </Link> */}
                                 <div className=' flex flex-col justify-center md:gap-1 xl:gap-2'>
+                                    <Link to={`/category/${category}/product/${product.id}/${product.title}`}>
                                     <h2 className='flex flex-wrap text-lg md:text-2xl lg:text-3xl xl:text-4xl'>{product.title}</h2>
+                                    </Link>
                                     <div className=' flex text-sm md:text-md lg:text-lg  xl:text-xl'><p className=' text-center items-center justify-center text-[#ffa41c] flex'>{reviewStars(product.rating)}</p> <p className=' '>({product.rating})</p></div>
                                   
-                                    <p className=' text-[#565959] text-sm md:text-md lg-text-lg xl:text-xl'>({product.reviews.length}) customer reviews</p>
+                                    <p className=' text-[#565959]  text-sm md:text-base lg-text-lg xl:text-xl'>({product.reviews.length}) customer reviews</p>
+                                    <Link to={`/category/${category}/product/${product.id}/${product.title}`}>
                                     <div className=' flex gap-2 md:items-end flex-col md:flex-row'>
                                         <p className=' text-xl md:text-2xl lg:text-3xl xl:text-4xl '>${product.price}</p>
                                         <div className=' flex gap-2 items-end flex-row '>
-                                            <div className=' flex text-[#565959] text-sm md:text-md lg:text-lg xl:text-xl'><p>M.R.P: </p><p className=' line-through '>${actualPrise(product.price,product.discountPercentage)}</p></div>
-                                            <p className=' text-sm md:text-md lg:text-lg xl:text-xl'>({product.discountPercentage}% off)</p>
-                                        </div>
-                                        
+                                            <div className=' flex text-[#565959] text-sm md:text-base lg:text-lg xl:text-xl'><p>M.R.P: </p><p className=' line-through '>${actualPrise(product.price,product.discountPercentage)}</p></div>
+                                            <p className=' text-sm md:text-base lg:text-lg xl:text-xl'>({product.discountPercentage}% off)</p>
+                                        </div>  
                                     </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

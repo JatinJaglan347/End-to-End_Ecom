@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CategoriesContext } from '../../contexts/Categories/categories';
 import { RandomproductsContext } from '../../contexts/RandomProducts/Randomproducts';
+// import { Link } from 'react-router-dom';
 
 
 
@@ -41,6 +42,7 @@ const Categories = () => {
               <div className='rounded-2xl bg-[white]/30  text-gray-800  shadow-md focus:outline-none p-5 m-2 '>
                 <div className=' grid grid-cols-1'>
                   <div className='col-span-1 flex flex-col text-start justify-center items-center'>
+                    <Link to={`/product/${id}/${title}`}>
                     <img className='w-[300px] h-[265px] object-cover rounded-2xl' src={imageUrl} alt="" />   
                     <div className='flex w-full flex-col gap-3 text-start  '>
                       <h1 className=' text-lg md:text-xl lg:text-2xl text-nowrap '>{formatString(title)}</h1>
@@ -49,6 +51,7 @@ const Categories = () => {
                         <p className=' font-semibold text-base md:text-lg  lg:text-xl  flex items-end justify-end;'>{discountPercentage}%off</p>
                       </div>             
                     </div>
+                    </Link>
                   </div>
                 </div>
               </div>

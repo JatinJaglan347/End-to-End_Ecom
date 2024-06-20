@@ -21,8 +21,8 @@ const Landingpage = () => {
       
       </div>
       <div className=' z-10'>
-        <Mainnavbar />
-        <Subnavbar />
+        {/* <Mainnavbar />
+        <Subnavbar /> */}
         <div className=' z-10 w-full flex flex-col items-center'>
             <div className="border-t  border-gray-400 mb-8 w-[80%] "></div>   
         </div>
@@ -38,7 +38,7 @@ const Landingpage = () => {
         <div className=' z-10 w-full flex flex-col items-center'>
             <div className="border-t  border-gray-400 my-14 w-[80%] "></div>   
         </div>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     {/* </div> */}
     </>
