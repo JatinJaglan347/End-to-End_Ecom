@@ -3,6 +3,7 @@ import { CategoriesContext } from '../../contexts/Categories/categories';
 import { FaChevronDown } from "react-icons/fa";
 import { Link , NavLink} from 'react-router-dom';
 
+
 function Subnavbar() {
   const categories = useContext(CategoriesContext);
   const [openDropdown, setOpenDropdown] = useState(null);

@@ -70,7 +70,7 @@ export function Mainnavbar() {
         <div className="relative w-[70%] max-w-[400px]">
             <IoMdSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600" />
             <input
-            className="w-full h-10 lg:h-12 rounded-lg bg-gray-100 px-3 pl-10 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+            className="w-full h-10 lg:h-12 rounded-lg bg-white px-3 pl-10 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
             type="text"
             placeholder="Search"
             />

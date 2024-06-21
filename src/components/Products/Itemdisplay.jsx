@@ -16,7 +16,7 @@ function Itemdisplay( ) {
 
     AOS.init();
     useEffect (()=>{
-      AOS.init({duration:1000})
+      AOS.init({duration:1600})
     })
     
     useEffect(()=> {
