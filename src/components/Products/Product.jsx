@@ -124,17 +124,17 @@ function Product() {
             <div className=' w-[80%] flex flex-col gap-7 my-7 md:my-10'>
                <div className=' w-full flex flex-col lg:flex-row gap-7'>
                     <div className='imagebox flex flex-col lg:w-[50%] rounded-xl '>
-                        <div className='w-full h-[70%] mb-[5%] bg-white rounded-xl flex items-center justify-center'>
+                        <div className='w-full h-[70%] mb-[5%] bg-white rounded-xl drop-shadow-md flex items-center justify-center'>
                             <img className='w-[90%] lg:w-[60%]' src={selectedImage || product.images[0]} alt="" />
                         </div>
-                        <div className='flex gap-4 w-full h-[25%] bg-white rounded-xl p-4 justify-between'>
+                        <div className='flex gap-4 w-full h-[25%] bg-white rounded-xl drop-shadow-md p-4 justify-between'>
                             {product.images.length === 1 && (
                                 <div className='flex justify-center text-center items-center m-auto'>
                                     <p className="text-gray-500">No more related images</p>
                                 </div>
                             )}
                             {product.images.length > 1 && (
-                                <div className='flex gap-4 h-full w-full bg-white rounded-xl lg:p-4 p-1 justify-between'>
+                                <div className='flex gap-4 h-full w-full bg-white rounded-xl  lg:p-4 p-1 justify-between'>
                                     {product.images.map((image, index) => (
                                         <span
                                             key={index}
@@ -149,12 +149,12 @@ function Product() {
                         </div>
                     </div>
 
-                    <div className=' contentbox flex justify-center flex-col lg:w-[50%] bg-white rounded-xl   p-6 md:p-12'>
+                    <div className=' contentbox flex justify-center flex-col lg:w-[50%] bg-white rounded-xl drop-shadow-md  p-6 md:p-12'>
 
                         <div>
                             <div >
                                 <h1 className=' md:text-3xl text-2xl font-bold text-wrap '>{product.title}</h1>
-                                <p className=' md:text-lg text-base text-[#565959] text-wrap py-3'>{product.description}</p>
+                                <p className=' md:text-lg text-base text-[#565959] text-pretty py-3'>{product.description}</p>
                             </div>
                             <div className=' flex gap-5'>
                                 <div className=' flex text-sm md:text-md lg:text-lg  xl:text-xl gap-1 '><p className=' text-sm md:text-base xl:text-base flex text-end items-end justify-end '>{product.rating}</p><p className=' text-[#ffa41c] text-lg flex text-end items-end justify-end'>{reviewStars(product.rating)}</p></div>
@@ -202,7 +202,7 @@ function Product() {
                                     <div className="text-xl rounded-full p-1 bg-slate-100">
                                         {item.icon}
                                     </div>
-                                    <p className=' w-[90px]  '>{item.text}</p>
+                                    <p className=' w-[92px] capitalize '>{item.text}</p>
                                 </div>
                                 ))}
                             </div>
@@ -270,7 +270,7 @@ function Product() {
                     </div>
                </div>
                <div>
-                    <div className='w-full bg-white rounded-xl flex flex-col  p-12'>
+                    <div className='w-full bg-white rounded-xl drop-shadow-md flex flex-col  p-12'>
                         <div className=' flex flex-col gap-6 ' >
                             <h1 className=' text-4xl font-semibold'>Reviews</h1>
                             <div className=' flex gap-5'>

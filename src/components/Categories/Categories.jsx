@@ -1,12 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext ,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CategoriesContext } from '../../contexts/Categories/categories';
 import { RandomproductsContext } from '../../contexts/RandomProducts/Randomproducts';
-// import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 
 
 const Categories = () => {
+  AOS.init();
+  useEffect (()=>{
+    AOS.init({duration:1000})
+  })
+
   const categories = useContext(CategoriesContext);
   const { id, title, description, category, price, discountPercentage, rating, imageUrl } = useContext(RandomproductsContext);
   const filteredCategories1 = categories.filter(category => category.id === 1);
@@ -38,7 +44,7 @@ const Categories = () => {
         </div>
           <div className=' grid xl:grid-cols-4  w-[100%]'>
 
-            <div className=''>
+            <div className='' data-aos="fade-up">
               <div className='rounded-2xl bg-[white]/30  text-gray-800  shadow-md focus:outline-none p-5 m-2 '>
                 <div className=' grid grid-cols-1'>
                   <div className='col-span-1 flex flex-col text-start justify-center items-center'>
@@ -58,7 +64,7 @@ const Categories = () => {
             </div>
 
 
-            <div className=' lg:col-span-3' >
+            <div className=' lg:col-span-3' data-aos="fade-up" >
               {filteredCategories1.map(category => (
                 <div className='  rounded-2xl p-5 m-2 bg-white/40 shadow-md' key={category.id}>
                   <h2 className=' text-2xl pb-5 pl-3 font-semibold'>{category.name}</h2>
@@ -81,9 +87,9 @@ const Categories = () => {
 
           <div className=' grid lg:grid-cols-4 grid-rows-2 w-[100%] '>
             {filteredCategories.map(category => (
-              <div className='  rounded-2xl p-5 m-2 col-span-2 bg-white/40 shadow-md' key={category.id}>
+              <div className='  rounded-2xl p-5 m-2 col-span-2 bg-white/40 shadow-md' key={category.id} data-aos="zoom-in-down">
                 <h2 className=' text-2xl pb-5 text-left pl-3 font-semibold'>{category.name}</h2>
-                <div className=' grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5'>
+                <div className=' grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5' >
                   {category.subcategories.map(subcategory => (
                     <div className='  col-span-1 flex flex-col justify-center items-center' key={subcategory.id} >
                       <Link to={`/category/${subcategory.categoryname}`}>
@@ -97,7 +103,7 @@ const Categories = () => {
             ))}
           </div>
 
-          <div className=' grid lg:grid-cols-4  w-[100%] '>
+          <div className=' grid lg:grid-cols-4  w-[100%] ' data-aos="flip-down">
             {filteredCategories6.map(category => (
               <div className=' rounded-2xl p-5 m-2 col-span-4  bg-white/40 shadow-md' key={category.id}>
                 <h2 className=' text-2xl pb-5 pl-3 font-semibold'>{category.name}</h2>

@@ -38,7 +38,7 @@ export function Mainnavbar() {
 
 
   return (
-    <div className="w-full bg-transparent">
+    <div className="w-full bg-transparent" data-aos="fade-down" data-aos-duration="1000" >
       <div className="mx-auto flex w-[80%]  items-center justify-between px-0 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>

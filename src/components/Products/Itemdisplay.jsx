@@ -6,11 +6,18 @@ import { IoIosStarOutline } from "react-icons/io";
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 function Itemdisplay( ) {
     const {category}= useParams();
     const [items, setItems] = useState([])
     const [loading , setLoading ] = useState([true])
+
+    AOS.init();
+    useEffect (()=>{
+      AOS.init({duration:1000})
+    })
     
     useEffect(()=> {
        ;(async ()=> {
@@ -60,20 +67,20 @@ function Itemdisplay( ) {
 
   return (
     <>
-        <div className=''>
-            <div className=' w-full justify-center items-center flex flex-col my-9'>
-                <div className=' lg:w-[80%]'>
+        <div className=' w-full bg-slate-100'>
+            <div className=' w-full justify-center items-center flex flex-col '>
+                <div className=' lg:w-[80%] my-11'>
                     {items.map(product => (
-                        <div className=' ' key={product.id}>
-                            <div className=' flex gap-6 border-2 m-2 rounded-lg '>
-                                {/* <Link to={`/category/${category}/product/${product.id}/${product.title}`}> */}
-                                <div className='md:max-w-[20%] max-w-[35%] md:min-w-[20%] min-w-[35%] bg-[#d1d1d1] items-center justify-center text-center flex '>
+                        <div className='flex flex-col ' key={product.id}>
+                            <div className=' flex gap-6  m-2 rounded-xl drop-shadow-md bg-white ' data-aos="fade-up" >
+                                
+                                <div className='md:max-w-[20%] max-w-[35%] md:min-w-[20%] min-w-[35%] bg-[#d1d1d1] rounded-l-xl drop-shadow-md  items-center justify-center text-center flex '>
                                     <Link to={`/category/${category}/product/${product.id}/${product.title}`}>
                                     <img className='' src={product.images[0]} alt={product.title} />
                                     </Link>
                                 </div>
-                                {/* </Link> */}
-                                <div className=' flex flex-col justify-center md:gap-1 xl:gap-2'>
+                             
+                                <div className=' flex flex-col justify-center md:gap-1 xl:gap-2 '>
                                     <Link to={`/category/${category}/product/${product.id}/${product.title}`}>
                                     <h2 className='flex flex-wrap text-lg md:text-2xl lg:text-3xl xl:text-4xl'>{product.title}</h2>
                                     </Link>

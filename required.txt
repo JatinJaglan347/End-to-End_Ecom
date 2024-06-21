@@ -1,4 +1,4 @@
 npm i axios
 npm install react-icons
 npm install @tailwindcss/aspect-ratio
-npm i @material-tailwind/react
+npm install aos

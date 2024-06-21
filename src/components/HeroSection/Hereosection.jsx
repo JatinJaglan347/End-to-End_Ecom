@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 function Hereosection() {
+    useEffect (()=>{
+        AOS.init({duration:1000})
+    })
+    AOS.init();
     return (
         <>
         <div className='max-w-screen overflow-hidden box-border'>
@@ -46,14 +52,14 @@ function Hereosection() {
                             <div className="pointer-events-none w-full mx-auto">
                                 <div className="flex items-center space-x-6 lg:space-x-8">
                                     <div className="grid grid-cols-1 gap-y-6 lg:gap-y-8 flex-1">
-                                        <div className="h-56 w-full overflow-hidden rounded-lg">
+                                        <div className="h-56 w-full overflow-hidden rounded-lg" data-aos="fade-down-right" data-aos-duration="1000" data-aos-easing="linear">
                                             <img
                                                 src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
                                                 alt=""
                                                 className="h-full w-full object-cover object-center"
                                             />
                                         </div>
-                                        <div className="h-56 w-full overflow-hidden rounded-lg lg:w-auto">
+                                        <div className="h-56 w-full overflow-hidden rounded-lg lg:w-auto" data-aos="fade-up-right" data-aos-duration="1000" data-aos-easing="linear">
                                             <img
                                                 src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
                                                 alt=""
@@ -61,8 +67,8 @@ function Hereosection() {
                                             />
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-1 gap-y-6 lg:gap-y-8 flex-1">
-                                        <div className="h-56 w-full overflow-hidden rounded-lg lg:w-auto">
+                                    <div className="grid grid-cols-1 gap-y-6 lg:gap-y-8 flex-1" >
+                                        <div className="h-56 w-full overflow-hidden rounded-lg lg:w-auto" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="linear">
                                             <img
                                                 src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
                                                 alt=""
@@ -76,7 +82,7 @@ function Hereosection() {
                                                 className="h-full w-full object-cover object-center"
                                             />
                                         </div>
-                                        <div className="h-56 w-full overflow-hidden rounded-lg lg:w-auto">
+                                        <div className="h-56 w-full overflow-hidden rounded-lg lg:w-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
                                             <img
                                                 src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
                                                 alt=""
@@ -85,14 +91,14 @@ function Hereosection() {
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 gap-y-6 lg:gap-y-8 flex-1">
-                                        <div className="h-56 w-full overflow-hidden rounded-lg lg:w-auto">
+                                        <div className="h-56 w-full overflow-hidden rounded-lg lg:w-auto" data-aos="fade-down-left" data-aos-duration="1000" data-aos-easing="linear">
                                             <img
                                                 src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
                                                 alt=""
                                                 className="h-full w-full object-cover object-center"
                                             />
                                         </div>
-                                        <div className="h-56 w-full overflow-hidden rounded-lg lg:w-auto">
+                                        <div className="h-56 w-full overflow-hidden rounded-lg lg:w-auto" data-aos="fade-up-left" data-aos-duration="1000" data-aos-easing="linear">
                                             <img
                                                 src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
                                                 alt=""

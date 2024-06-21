@@ -25,7 +25,7 @@ function Subnavbar() {
   }
 
   return (
-    <div className="relative ">
+    <div className="relative  " data-aos="fade-down" data-aos-duration="1000">
         <div className='hidden sm:block m-auto w-[100%] md:w-[90%] lg:w-[90%] xl:w-[80%] items-center justify-center px-0 py-2 sm:px-6 lg:px-8'>
             <div className="flex space-x-4 w-[100%] justify-between ">
                 {categories.map((category) => (

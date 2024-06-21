@@ -3,7 +3,7 @@ import aboutImage from '../../assets/aboutImage.svg'; // Adjust the path if nece
 
 function SmallAbout() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center w-full">
+    <div className="flex flex-col md:flex-row items-center justify-center w-full" data-aos="fade-up">
         <div className='flex flex-col md:flex-row items-center justify-between px-6 w-[80%]'>
             <div className="md:w-1/2 px-4">
                 <h2 className="text-lg md:text-xl lg:text-2xl font-bold mb-4">Discover a world of possibilities with us.</h2>
