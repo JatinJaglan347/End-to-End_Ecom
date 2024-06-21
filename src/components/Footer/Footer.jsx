@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaFacebookF, FaTwitter, FaGithub, FaInstagram , FaLinkedin } from 'react-icons/fa';
 import { BsCart4 } from "react-icons/bs";
 
 const Footer = () => {
+  const [year , setYear] = useState()
+  useEffect (() => {
+    setYear(new Date().getFullYear());
+  },[]);
+
   return (
     <footer className="bg-transparent ">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -51,25 +56,25 @@ const Footer = () => {
         </div>
         <hr className="my-6  sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center ">© 2023 <a href="https://github.com/JatinJaglan347" className="hover:underline">Ecom™</a>. All Rights Reserved.</span>
+          <span className="text-sm text-gray-500 sm:text-center ">© {year} <a href="https://github.com/JatinJaglan347" className="hover:underline">Ecom™</a>. All Rights Reserved.</span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
-            <a href="#" className="text-gray-500 hover:text-gray-900 ">
+            <a href="#" className="text-gray-500 hover:text-[#01D7E2] ">
               <FaFacebookF className="w-4 h-4" />
               <span className="sr-only">Facebook page</span>
             </a>
-            <a href="https://www.linkedin.com/in/jatinjaglan/" className="text-gray-500 hover:text-gray-900  ml-5">
+            <a href="https://www.linkedin.com/in/jatinjaglan/" className="text-gray-500 hover:text-[#01D7E2]  ml-5">
               <FaLinkedin  className="w-4 h-4" />
               <span className="sr-only">Linkedin account</span>
             </a>
-            <a href="https://x.com/Jatin_Jaglan347" className="text-gray-500 hover:text-gray-900 ml-5">
+            <a href="https://x.com/Jatin_Jaglan347" className="text-gray-500 hover:text-[#01D7E2] ml-5">
               <FaTwitter className="w-4 h-4" />
               <span className="sr-only">Twitter page</span>
             </a>
-            <a href="https://github.com/JatinJaglan347" className="text-gray-500 hover:text-gray-900 ml-5">
+            <a href="https://github.com/JatinJaglan347" className="text-gray-500 hover:text-[#01D7E2] ml-5">
               <FaGithub className="w-4 h-4" />
               <span className="sr-only">GitHub account</span>
             </a>
-            <a href="https://www.instagram.com/jatinjaglan347/" className="text-gray-500 hover:text-gray-900  ml-5">
+            <a href="https://www.instagram.com/jatinjaglan347/" className="text-gray-500 hover:text-[#01D7E2]  ml-5">
               <FaInstagram  className="w-4 h-4" />
               <span className="sr-only">Instagram account</span>
             </a>
